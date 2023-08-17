@@ -14,8 +14,6 @@ import (
 	"nhooyr.io/websocket/wsjson"
 )
 
-const proxyServerPort = 8081
-
 func TestViaProxy(t *testing.T) {
 	fn := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		c, err := websocket.Accept(w, r, nil)
